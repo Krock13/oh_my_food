@@ -19,7 +19,7 @@
             <section class="welcome">
                 <div class="welcome__location">
                     <i class="fas fa-map-marker-alt"></i>
-                    <h3>Paris, belleville</h3>
+                    <h3>Paris, Belleville</h3>
                 </div>
                 <div class="welcome__description">
                     <h2>Réservez le menu qui vous convient</h2>
@@ -30,36 +30,74 @@
             <nav class="working">
                 <h2>Fonctionnement</h2>
                 <ul>
-                    <li class="selector">1<i class="fas fa-mobile-alt"></i><span>Choisissez un restaurant</span></li>
-                    <li class="selector">2<i class="fas fa-list"></i><span>Composez votre menu</span></li>
-                    <li class="selector">3<i class="fas fa-store"></i><span>Dégustez au restaurant</span></li>
+                    <li class="working__selector">
+                        <span class="working__selector__number">1</span>
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="working__selector__choice">Choisissez un restaurant</span>
+                    </li>
+                    <li class="working__selector">
+                        <span class="working__selector__number">2</span>
+                        <i class="fas fa-list"></i>
+                        <span class="working__selector__choice">Composez votre menu</span>
+                    </li>
+                    <li class="working__selector working__selector--pink">
+                        <span class="working__selector__number">3</span>
+                        <i class="fas fa-store working__selector__icon"></i>
+                        <span class="working__selector__choice">Dégustez au restaurant</span>
+                    </li>
                 </ul>
             </nav>
             <section class="restaurant">
                 <h2>Restaurants</h2>
-                <div class="thumbnail">
+                <div class="restaurant__thumbnail">
+                    <span class="restaurant__thumbnail__badge_new">Nouveau</span>
                     <img src="./images/restaurants/la_palette_du_gout.jpg" alt="Photo du restaurant La palette du goût">
-                    <h3>La palette du goùt</h3>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__thumbnail__description">
+                        <div>                    
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restaurant__thumbnail__icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="thumbnail">
+                <div class="restaurant__thumbnail">
+                    <span class="restaurant__thumbnail__badge_new">Nouveau</span>
                     <img src="./images/restaurants/la_note_enchantee.jpg" alt="Photo du restaurant La note enchantée">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__thumbnail__description">
+                        <div>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <div class="restaurant__thumbnail__icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="thumbnail">
+                <div class="restaurant__thumbnail">
                     <img src="./images/restaurants/a_la_française.jpg" alt="Photo du restaurant À la française">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__thumbnail__description">
+                        <div>
+                            <h3>À la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <div class="restaurant__thumbnail__icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="thumbnail">
+                <div class="restaurant__thumbnail">
                     <img src="./images/restaurants/le_delice_des_sens.jpg" alt="Photo du restaurant Le délice des sens">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
-                    <i class="far fa-heart"></i>
+                    <div class="restaurant__thumbnail__description">
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="restaurant__thumbnail__icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
