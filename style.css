@@ -227,6 +227,38 @@ h1 {
   box-shadow: 2px 2px 10px #c3c3c2;
 }
 
+.footer {
+  background-color: #2b2b2b;
+  color: white;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+  padding: 0.5rem;
+  height: 13rem;
+}
+.footer__icons {
+  width: 1.8rem;
+}
+.footer__list {
+  padding: 0.4rem;
+  margin-left: -1.9rem;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+.footer__block {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+
 /*HEADER*/
 header {
   display: flex;
@@ -305,8 +337,8 @@ header {
   color: white;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-left: -2.7rem;
   margin-right: 2rem;
 }
@@ -324,6 +356,10 @@ header {
 }
 .restaurant h2 {
   margin-bottom: 1.9rem;
+}
+.restaurant__link {
+  text-decoration: none;
+  color: black;
 }
 .restaurant__thumbnail {
   position: relative;
@@ -353,7 +389,6 @@ header {
   padding: 1rem 1.6rem 1.25rem 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 .restaurant__thumbnail__description p {
   font-size: 1.2rem;
@@ -363,42 +398,21 @@ header {
   margin-top: 0rem;
   margin-bottom: -1rem;
 }
-.restaurant__thumbnail__icon {
+.restaurant__hearts .far, .restaurant .fas {
+  position: absolute;
+  right: 1.6rem;
+  top: 14.4rem;
   font-size: 1.7rem;
   color: gray;
 }
-
-/*footer*/
-.footer {
-  background-color: #2b2b2b;
-  color: white;
-  margin-top: -1.5rem;
-  margin-bottom: -1.5rem;
-  padding: 0.5rem;
-  height: 13rem;
+.restaurant__hearts .far.fas, .restaurant .fas.fas {
+  opacity: 0;
 }
-.footer__icons {
-  width: 1.8rem;
-}
-.footer__list {
-  padding: 0.4rem;
-  margin-left: -1.9rem;
-}
-.footer__title {
-  font-family: "Shrikhand", cursive;
-  font-weight: lighter;
-  font-size: 1.3rem;
-  margin-left: 1rem;
-}
-.footer ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.footer a {
-  text-decoration: none;
-  color: white;
+.restaurant__hearts .far.fas:hover, .restaurant .fas.fas:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
 }
 
 /*# sourceMappingURL=style.css.map */
