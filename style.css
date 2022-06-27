@@ -497,9 +497,33 @@ header {
   background-color: #f6f6f6;
   border-radius: 15px;
   margin-top: 1rem;
+  margin-right: -0.8rem;
   display: flex;
   flex-direction: row;
   box-shadow: 2px 2px 10px #c3c3c2;
+}
+.dishes__insert__check {
+  position: relative;
+  opacity: 0;
+  font-size: 1.3rem;
+  padding: 0rem 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
+  right: -3.3rem;
+  color: white;
+  background-color: #99E2D0;
+}
+.dishes__insert:hover .dishes__insert__check {
+  opacity: 1;
+  transition: all 0.8s ease-in-out;
+}
+.dishes__insert:hover .check_icons {
+  opacity: 1;
+  transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
 }
 .dishes__insert h4 {
   font-size: 1rem;
@@ -518,14 +542,22 @@ header {
 }
 .dishes__insert__price {
   position: absolute;
-  right: 1.5rem;
-  top: 2.4rem;
   font-weight: bolder;
   font-size: 0.95rem;
+  right: 1.5rem;
+  top: 2.4rem;
+}
+.dishes__insert:hover .dishes__insert__price {
+  right: 5rem;
+  transition: all 0.8s ease-in-out;
 }
 .dishes__insert__text {
   width: 83%;
   white-space: nowrap;
+}
+.dishes__insert:hover .dishes__insert__text {
+  width: 70%;
+  transition: all 0.8s ease-in-out;
 }
 
 #btn_pages {
