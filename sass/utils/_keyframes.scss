@@ -1,0 +1,31 @@
+@keyframes loader_restaurant {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes loader_index{
+    0%{
+        margin-right: 10rem;
+        scale: (0);
+    }
+    50% {
+        margin-right: 1rem;
+        scale: (2);
+        transform: rotate(180deg);
+    }
+    100%{
+        margin-right: 0rem;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes animation-end {
+    100% {
+        visibility: hidden;
+    }
+}

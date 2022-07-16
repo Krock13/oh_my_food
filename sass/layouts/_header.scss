@@ -1,0 +1,17 @@
+
+header {
+    @include flex_row;
+    justify-content: center;
+}
+
+.arrow .fas {
+    font-size: 1.25rem;
+    color: black;
+    margin: 1.2rem 4.8rem 1.2rem -4.8rem;
+}
+
+.logo {
+    width: 10rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}

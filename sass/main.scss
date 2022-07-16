@@ -1,0 +1,453 @@
+@import "./libs/normalize.scss";
+
+@import "./utils/variables";
+
+@import "./utils/mixins";
+
+@import "./utils/keyframes";
+
+@import "./base/typography";
+
+@import "./components/btn";
+
+@import "./components/heart";
+
+@import "./layouts/header";
+
+@import "./layouts/footer";
+
+/*LOADER*/
+
+.loading{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    background-color: $gray_color;
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+    @include flex_row;
+    @include align_justify_center;
+    animation: animation-end 3000ms;
+    animation-fill-mode: both;
+    &__spinner{
+        padding-top: 0.5rem;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: larger;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        animation: loader_index 2200ms;
+        animation-timing-function: ease-in-out;
+        &--1{
+            background-color: $primary-color;
+        }
+        &--2{
+            background-color: $secondary-color;
+        }
+        &--3{
+            background-color: $tertiary-color;
+        }
+    }
+}
+
+/*EXPLORATION*/
+
+.welcome {    
+    height: 21rem;
+    @include gray_light;
+    &__location {
+        background-color: $gray_color;
+        @include flex_row;
+        @include align_justify_center;
+        height: 3.2rem;
+        box-shadow: inset 0px 2px 5px 0px $shadow-color;
+        & h3 {
+            margin-left: 1rem;
+            color: darken($gray_color, 65%);
+            font-size: 1rem;
+        }
+    }
+    &__description {
+        @include flex_column;
+        text-align: center;
+        width: 78%;
+        margin: auto;
+        padding-top: 1rem;
+        & h2 {
+            margin-bottom: 0rem;
+        }
+        & p {
+            color: lighten(black, 50%);
+        }
+    }
+}
+
+/*FONCTIONNEMENT*/
+
+.working {
+    height: 24.5rem;
+    & ul {
+        list-style-type: none;
+    }
+    & h2 {
+        margin: 3rem 1rem 2rem 1.5rem;
+    }
+    &__selector {
+        @include flex_row;
+        align-items: center;
+        padding: 1.4rem;
+        @include gray_light;
+        border-radius: 20px;
+        margin-bottom: 1.8rem;
+        margin-right: 1rem;
+        margin-left: -0.5rem;
+        @include shadow;
+        &--pink {
+            background-color: lighten($primary-color, 35%);
+        }
+        &__number {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: $primary_color;
+            color: white;
+            @include flex_row;
+            @include align_justify_center;
+            margin-left: -2.1rem;
+            margin-right: 2rem;
+        }
+        &__icon_pink {
+            color: $primary-color;
+        }
+        &__icon_grey {
+            color: lighten(black, 50%);
+        }
+        &__choice {
+            position: absolute;
+            margin-left: 3.8rem;
+            font-weight: 600;
+        }
+    }
+}
+
+/*RESTAURANTS*/
+
+.restaurant {
+    padding: 2rem 1.3rem 3.8rem 1.3rem;
+    margin-bottom: -1rem;
+    @include gray_light;
+    & h2 {
+        margin-bottom: 1.7rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: black;
+    }
+    &__thumbnail {
+        position: relative;
+        background-color: white;
+        max-height: 15.5rem;
+        margin-bottom: 1.3rem;
+        border-radius: 15px;
+        @include shadow;
+        &__badge_new {
+            position: absolute;
+            right: 0.6rem;
+            top: 0.6rem;
+            padding: 0.5rem 0.7rem;
+            background-color: $tertiary_color;
+            color: darken($tertiary_color, 40%);
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 3px;
+        }
+        & img {
+            max-height: 11rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            object-position: bottom;
+        }
+        &__description {
+            padding: 0.6rem 1.6rem 1.25rem 1rem;
+            @include flex_row;
+            & p {
+            font-size: 1.2rem;
+            padding-bottom: 1rem;
+            color: lighten(black, 25%);
+            }
+            & h3 {
+                margin-top: 0rem;
+                margin-bottom: -1rem;
+            }
+
+        }
+    }
+    &__hearts .far, .fas{
+        right: 1.6rem;
+        top: 12rem;
+        }
+}
+
+#img_spec {
+    object-position: 50% 62%;
+}
+
+/* Pages */
+
+.presentation_img {
+    height: 16rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.diner {
+    position: relative;
+    margin-top: -2.5rem;
+    padding: 1rem 1.6rem 1.25rem 1rem;
+    border-radius: 40px 40px 0 0;
+    background-color: $gray_color;
+    &__title {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 200;
+        &__hearts .far, .fas{
+            right: 2.2rem;
+            top: 2.3rem;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    margin-top: -0.6rem;
+    h3 {
+        font-weight: lighter;
+        color: darken($gray_color, 65%);
+        margin-bottom: 2rem;
+    }
+}
+
+.borderbottom {
+    border-top: 0.25rem solid $tertiary_color;
+    position: absolute;
+    left: 0;
+    right: 85%;
+    margin-top: -1.2rem;
+}
+
+#btn_pages {
+    padding: 1rem 3rem;
+    margin-top: 3.1rem;
+    margin-bottom: 4rem;
+}
+
+.dishes {
+    margin-top: 2.5rem;
+    :nth-child(3) {
+        animation-delay: 100ms;
+    }
+    :nth-child(4) {
+        animation-delay: 400ms;
+    }
+    :nth-child(5) {
+        animation-delay: 800ms;
+    }
+    :nth-child(6) {
+        animation-delay: 1200ms;
+    }
+    h3 {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+    }
+    &__insert {
+        animation: loader_restaurant 5000ms;
+        animation-fill-mode: both;
+        height: 4.2rem;
+        width: 100%;
+        padding-left: 0.6rem;
+        background-color: $gray_color_light;
+        @include flex_row;
+        align-items: center;
+        border-radius: 15px;
+        margin-top: 1rem;
+        overflow: hidden;
+        @include shadow;
+        &__check {
+            height: 4.2rem;
+            width: 6rem;
+            opacity: 0;
+            background-color: $tertiary-color;
+            margin-left: 1.5rem;
+            margin-right: -4rem;
+            border-radius: 0px 15px 15px 0px;
+            color: white;
+            font-size: 1.3rem;
+            @include flex_row;
+            @include align_justify_center;
+            transition: all 0.8s ease-in-out;
+        }
+
+        &:hover .dishes__insert__check{
+            opacity: 1;
+            margin-right: 0rem;
+            transition: all 0.8s ease-in-out;
+        }
+
+        &:hover .check_icons{
+            opacity: 1;
+            transform: rotate(-360deg);
+            transition: all 0.8s ease-in-out;
+        }
+        h4 {
+            font-size: 1.1rem;
+            margin-top: 0.6rem;
+            margin-bottom: 0.3rem;
+            @include overflow;
+        }
+        p {
+            margin-top: 0.4rem;
+            margin-bottom: 0.6rem;
+            color: lighten(black, 25%);
+            font-size: 0.9rem;
+            @include overflow;
+        }
+        &__price {
+            font-weight: bolder;
+            font-size: 0.95rem;
+            margin-left: 0.6rem;
+            margin-top: 1.5rem;
+            }
+
+        &__text {
+            width: 100%;
+            @include overflow;
+        }
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .btn {
+        margin-top: 3rem;
+    }
+
+    .restaurant {
+        h2 {
+            margin-left: 15%;
+        }
+        &__thumbnail {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 25rem;
+            margin-bottom: 2rem;
+            & img {
+                max-height: 20rem;
+            }
+        }
+        &__hearts .far, .fas {
+            top: 21.5rem;
+        }
+    }
+
+    .working {
+        max-width: 74%;
+        margin: auto;
+    }
+
+    .diner__title {
+        &__hearts .far, .fas {
+            margin-right: 14%;
+        }
+        h1 {
+            margin-left: 15%;
+        }
+    }
+
+    .footer {
+        padding-left: 15%;
+    }
+
+    .dishes {
+        @include flex_column;
+        align-items: center;
+        &__insert {
+            width: 70%;
+        }
+    }
+
+    .borderbottom {
+        left: 43%;
+        right: 43%;
+        margin-top: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .restaurant {
+        &__thumbnail {
+            max-height: 35rem;
+            margin-bottom: 2rem;
+            & img {
+                max-height: 30rem;
+            }
+        }
+        &__hearts .far, .fas {
+            top: 31.5rem;
+        }
+    }
+
+    .footer {
+        @include flex_column;
+        align-items: center;
+        height: auto;
+        margin-left: -15%;
+        padding-bottom: 0.5rem;
+        &__title {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+            margin-left: -0.6rem;
+        }
+    }
+
+    .diner__title {
+        &__hearts .far, .fas {
+            margin-right: 24%;
+        }
+        h1 {
+            margin-left: 25%;
+        }
+    }
+
+    .dishes__insert {
+        width: 50%;
+    }
+
+    .borderbottom {
+        left: 46%;
+        right: 46%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .restaurant {
+        h2 {
+            margin-left: 25%;
+        }
+        &__thumbnail {
+            width: 50%;
+        }
+    }
+
+    .working {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .borderbottom {
+        left: 47%;
+        right: 47%;
+    }
+}
