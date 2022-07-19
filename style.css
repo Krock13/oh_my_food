@@ -257,6 +257,10 @@ h1 {
   flex-direction: column;
   box-shadow: 2px 2px 10px #c3c3c2;
 }
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 2px 2px 10px gray;
+}
 
 .heart .fas, .heart .far {
   position: absolute;
@@ -418,9 +422,6 @@ header {
   margin-left: -0.5rem;
   box-shadow: 2px 2px 10px #c3c3c2;
 }
-.working__selector--pink {
-  background-color: #f2eafb;
-}
 .working__selector__number {
   height: 25px;
   width: 25px;
@@ -434,9 +435,6 @@ header {
   margin-left: -2.1rem;
   margin-right: 2rem;
 }
-.working__selector__icon_pink {
-  color: #9356DC;
-}
 .working__selector__icon_grey {
   color: gray;
 }
@@ -444,6 +442,12 @@ header {
   position: absolute;
   margin-left: 3.8rem;
   font-weight: 600;
+}
+.working__selector:hover {
+  background-color: #f2eafb;
+}
+.working__selector:hover :nth-child(2) {
+  color: #9356DC;
 }
 
 /*RESTAURANTS*/
