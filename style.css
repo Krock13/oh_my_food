@@ -219,12 +219,10 @@ template {
 @keyframes loader_index {
   0% {
     margin-right: 10rem;
-    scale: 0;
   }
   50% {
     margin-right: 1rem;
-    scale: 2;
-    transform: rotate(180deg);
+    transform: scale(2) rotate(180deg);
   }
   100% {
     margin-right: 0rem;
