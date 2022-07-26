@@ -353,14 +353,12 @@ header {
   border-radius: 50%;
   animation: loader_index 2200ms;
   animation-timing-function: ease-in-out;
-}
-.loading__spinner--1 {
   background-color: #9356DC;
 }
-.loading__spinner--2 {
+.loading__spinner:nth-child(n+3) {
   background-color: #FF79DA;
 }
-.loading__spinner--3 {
+.loading__spinner:nth-child(n+5) {
   background-color: #99E2D0;
 }
 

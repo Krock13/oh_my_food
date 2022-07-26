@@ -40,13 +40,11 @@
         border-radius: 50%;
         animation: loader_index 2200ms;
         animation-timing-function: ease-in-out;
-        &--1{
-            background-color: $primary-color;
-        }
-        &--2{
+        background-color: $primary-color;
+        &:nth-child(n+3) {
             background-color: $secondary-color;
         }
-        &--3{
+        &:nth-child(n+5) {
             background-color: $tertiary-color;
         }
     }
